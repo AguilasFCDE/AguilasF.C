@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Soccer Clinic | Aguilas Soccer Academy</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q49LF65WEW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q49LF65WEW');
+  </script>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -49,7 +59,14 @@
       background: rgba(0,0,0,0.6);
       padding: 8px 16px;
       border-radius: 8px;
-      display: none;
+      opacity: 0;
+      animation: rise-text 1.5s ease forwards;
+    }
+    @keyframes rise-text {
+      0% { transform: translate(-50%, 0); opacity: 0; }
+      30% { transform: translate(-50%, -20px); opacity: 1; }
+      70% { transform: translate(-50%, -40px); opacity: 1; }
+      100% { transform: translate(-50%, -60px); opacity: 0; }
     }
     header h1 {
       margin-top: 10px;
@@ -132,9 +149,9 @@
 <body>
   <header>
     <img id="eagle-logo" src="https://i.imgur.com/fBHLxUo.png" alt="Aguilas Logo" onclick="eagleScreech()" />
-    <div id="fly-text" class="slogan-fly">🦅 Rise like a champion!</div>
+    <div id="fly-text" class="slogan-fly" style="display:none;">🦅 Rise like a champion!</div>
     <h1>Aguilas Soccer Academy</h1>
-    <p style="font-size: 0.85rem;">(click the logo)</p>
+    <p style="font-size: 0.85rem; color: #fff; margin-top: 5px;">(click the logo)</p>
     <p style="font-size: 1.3rem; font-weight: bold; margin-top: 10px;">Passion that shapes champions 🏆</p>
   </header>
 
@@ -188,6 +205,7 @@
       const flyText = document.getElementById('fly-text');
       eagle.style.display = 'none';
       flyText.style.display = 'block';
+
       setTimeout(() => {
         flyText.style.display = 'none';
         eagle.style.display = 'block';
