@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soccer Clinic | Aguilas Soccer Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://i.imgur.com/RJ2FMIH.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 40, 0.4);
+      z-index: -1;
+    }
+    header {
+      text-align: center;
+      background-color: #FFD700;
+      padding: 25px;
+      position: relative;
+    }
+    header img#eagle-logo {
+      width: 220px;
+      filter: drop-shadow(0 0 5px #fff);
+      cursor: pointer;
+      transition: transform 0.3s ease, top 1.5s ease;
+      position: relative;
+      z-index: 10;
+      display: block;
+      margin: 0 auto;
+    }
+    .slogan-fly {
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 16px;
+      border-radius: 8px;
+      display: none;
+    }
+    header h1 {
+      margin-top: 10px;
+      font-size: 2.7rem;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px #000;
+    }
+    header p {
+      font-style: italic;
+      color: #ffffff;
+      font-size: 1.1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(0, 0, 50, 0.9);
+      padding: 30px;
+      border-radius: 16px;
+      margin-top: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      color: #ffffff;
+    }
+    h2 {
+      color: #FFD700;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+    h3 {
+      color: #ffffff;
+      border-bottom: 2px solid #FFD700;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+    p, ul {
+      font-size: 1.1rem;
+    }
+    .btn {
+      background-color: #FFD700;
+      color: #000;
+      padding: 12px 24px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #e6c200;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    footer {
+      text-align: center;
+      background: #1E3A8A;
+      color: #fff;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="eagle-logo" src="https://i.imgur.com/fBHLxUo.png" alt="Aguilas Logo" onclick="eagleScreech()" />
+    <div id="fly-text" class="slogan-fly">🦅 Rise like a champion!</div>
+    <h1>Aguilas Soccer Academy</h1>
+    <p style="font-size: 0.85rem;">(click the logo)</p>
+    <p style="font-size: 1.3rem; font-weight: bold; margin-top: 10px;">Passion that shapes champions 🏆</p>
+  </header>
+
+  <div class="container">
+    <h2>FREE YOUTH SOCCER CLINIC</h2>
+    <p>We invite all boys from 7 to 17 years old to participate in our dynamic soccer clinic. Not only do we teach the fundamentals of soccer, but we also instill discipline, teamwork, and values that empower youth on and off the field.</p>
+    <p>Led by certified coaches, our clinic builds confidence on and off the field. Join us and experience the difference of a truly empowering soccer community.</p>
+
+    <h3>📍 Location:</h3>
+    <p>TBD after registration</p>
+
+    <h3>🗓 Date & Time:</h3>
+    <p>TBD after registration</p>
+
+    <h3>🎯 What to expect:</h3>
+    <ul>
+      <li>Master your skills with elite-level guidance</li>
+      <li>Fun, high-energy games & teamwork</li>
+      <li>Surprise giveaways and participant rewards</li>
+      <li>Scholarship opportunities for standout players</li>
+    </ul>
+
+    <img src="https://i.imgur.com/oUZgyTc.jpeg" alt="Clinic Image" style="width: 100%; margin: 20px 0; border-radius: 10px; box-shadow: 0 0 10px #000;" />
+
+    <p style="text-align: center; font-style: italic; font-size: 1.1rem; margin-bottom: 25px;">
+      Fill out the sign-up form below to secure your spot and join the experience.
+    </p>
+
+    <h3>📝 Register Now:</h3>
+    <form action="https://formspree.io/f/myzjqard" method="POST">
+      <input type="text" name="First Name" placeholder="First Name" required />
+      <input type="text" name="Last Name" placeholder="Last Name" required />
+      <input type="number" name="Age" placeholder="Age" required />
+      <input type="tel" name="Parent Phone" placeholder="Parent's Phone" required />
+      <input type="email" name="Email" placeholder="Email Address" required />
+      <button class="btn" type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Aguilas Soccer Academy | All rights reserved</p>
+    <div>
+      <a href="https://instagram.com/aguilasfc.academia">Instagram</a> |
+      <a href="https://wa.me/13026698364">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script>
+    function eagleScreech() {
+      const eagle = document.getElementById('eagle-logo');
+      const flyText = document.getElementById('fly-text');
+      eagle.style.display = 'none';
+      flyText.style.display = 'block';
+      setTimeout(() => {
+        flyText.style.display = 'none';
+        eagle.style.display = 'block';
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
